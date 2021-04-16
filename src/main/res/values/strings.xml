@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ok ca roule</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok_ca_roule">OK CA ROULE</string>
+    <string name="client_command">Commende de client</string>
+    <string name="commands">Les commendes</string>
+    <string name="name_hint">Nom de Client</string>
+    <string name="discription">Details</string>
+    <string name="command_name_hint"> Element</string>
+    <string name="Quantity"> Qte</string>
+    <string name="Discrition"> Details</string>
+    <string name="Add">Ajouter</string>
+    <string name="clean_all">Clean all List</string>
+    <string name="edit_name">Edit the name</string>
+    <string name="edit_discreption">Edit the discription</string>
+    <string name="edit_quantity">Edit the quantity</string>
+    <string name="apply_btn">APPLY</string>
+    <string name="cancel_btn">CANCEL</string>
+    <string name="total_des_velos">Total: </string>
+    <string name="velos_louer">louer: </string>
+    <string name="velos_dispo">disponnible: </string>
+    <string name="location">Location</string>
+    <string name="client_name_inpu_hint">Nom de Loueur</string>
+    <string name="bikes_count_hint">"Nombre des velos"</string>
+    <string name="telephone_de_client">Telephone du Client</string>
+    <string name="date_du_depart">Duree du Location</string>
+    <string name="price_hint">Prix</string>
+    <string name="phone_text">tel: %s</string>
+    <string name="Duree_text">Duree: %s</string>
+    <string name="bikes_count_text">Nombre du Velos: %s</string>
+    <string name="caution_text">Caution: %s</string>
+    <string name="locks_text">Antivols: %s</string>
+    <string name="price_text">Prix: %s</string>
+    <string name="ajouter_client">AJOUTER</string>
+    <string-array name="Caution">
+        <item>Caution</item>
+        <item>Cheque</item>
+        <item>Espece</item>
+        <item>Carte d\'identite</item>
+    </string-array>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="clientViewModel"
+            type="com.example.okcaroule.locationFragment.viewModel.LocationFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_des_velos"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/louer_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dispo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/velos_dispo"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/louer_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/louer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/velos_louer"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/dispo_text"
+            app:layout_constraintEnd_toStartOf="@+id/dispo_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/total_text" />
+
+        <TextView
+            android:id="@+id/dispo_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="#00C853"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/dispo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dispo_text"
+            app:layout_constraintTop_toTopOf="@+id/dispo_text" />
+
+        <TextView
+            android:id="@+id/total_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="#2962FF"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/louer_text"
+            app:layout_constraintEnd_toStartOf="@+id/louer_text"
+            app:layout_constraintStart_toEndOf="@+id/total_text"
+            app:layout_constraintTop_toTopOf="@+id/louer_text" />
+
+        <TextView
+            android:id="@+id/louer_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textColorLink="#D50000"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/dispo_text"
+            app:layout_constraintEnd_toStartOf="@+id/dispo_text"
+            app:layout_constraintStart_toEndOf="@+id/louer_text"
+            app:layout_constraintTop_toTopOf="@+id/dispo_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/location_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dispo_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ajouter_velos_btn"
+            android:layout_width="53dp"
+            android:layout_height="41dp"
+            android:longClickable="true"
+            android:onClick="@{ () -> clientViewModel.onAddBikesClicked(clientViewModel.pos)}"
+            android:src="@drawable/ic_baseline_exposure_plus_1_24"
+            app:layout_constraintBottom_toBottomOf="@+id/total_text"
+            app:layout_constraintEnd_toStartOf="@+id/total_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ajouter_client_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <com.squareup.timessquare.CalendarPickerView-->
+<!--        android:id="@+id/calendar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+</layout>

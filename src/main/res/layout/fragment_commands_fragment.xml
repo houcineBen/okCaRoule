@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="instance"
+            type="com.example.okcaroule.CommandsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/les_commendes"
+        android:padding="8dp"
+        tools:context=".commandsfragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="103dp"
+            tools:layout_editor_absoluteY="194dp">
+
+            <EditText
+                android:id="@+id/element_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:hint="@string/command_name_hint"
+                android:inputType="textPersonName"
+                android:paddingStart="6dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/element_count"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/element_count"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:hint="@string/Quantity"
+                android:inputType="number"
+                android:paddingStart="6dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="@dimen/med_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/element_discription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/Discrition"
+                android:inputType="textMultiLine"
+                android:paddingStart="6dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="@dimen/med_text_size"
+                app:layout_constraintEnd_toStartOf="@+id/add_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/element_name" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add_btn_shape"
+                android:onClick="@{() -> instance.onAddElement()}"
+                android:text="@string/Add"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/element_discription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/element_count" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/element_discription"
+                app:layout_constraintVertical_bias="1.0"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/deleteAllFloatingAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:onClick="@{() -> instance.onDeleteAllSelected()}"
+                app:backgroundTint="#E8A2A2"
+                app:fabCustomSize="70dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:maxImageSize="35dp"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

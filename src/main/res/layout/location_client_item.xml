@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/item_shape"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/client_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phone_number_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_text"
+        android:textAlignment="textStart"
+        android:textColor="#AEEA00"
+        android:textSize="@dimen/normal_size"
+        app:layout_constraintEnd_toStartOf="@+id/location_duration_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_name" />
+
+    <TextView
+        android:id="@+id/bikes_count_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bikes_count_text"
+        android:textAlignment="textStart"
+        android:textColor="#AEEA00"
+        android:textSize="@dimen/normal_size"
+        app:layout_constraintEnd_toEndOf="@+id/phone_number_tv"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_tv"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_tv" />
+
+    <TextView
+        android:id="@+id/lock_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/locks_text"
+        android:textAlignment="textStart"
+        android:textColor="#AEEA00"
+        android:textSize="@dimen/normal_size"
+        app:layout_constraintEnd_toEndOf="@+id/phone_number_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_tv"
+        app:layout_constraintTop_toBottomOf="@+id/bikes_count_tv" />
+
+    <TextView
+        android:id="@+id/location_duration_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Duree_text"
+        android:textAlignment="textStart"
+        android:textColor="#AEEA00"
+        android:textSize="@dimen/normal_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/phone_number_tv"
+        app:layout_constraintTop_toBottomOf="@+id/client_name" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/price_text"
+        android:textAlignment="textStart"
+        android:textColor="#AEEA00"
+        android:textSize="@dimen/normal_size"
+        app:layout_constraintEnd_toEndOf="@+id/location_duration_tv"
+        app:layout_constraintStart_toStartOf="@+id/location_duration_tv"
+        app:layout_constraintTop_toBottomOf="@+id/location_duration_tv" />
+
+    <TextView
+        android:id="@+id/caution_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/caution_text"
+        android:textAlignment="textStart"
+        android:textColor="#AEEA00"
+        android:textSize="@dimen/normal_size"
+        app:layout_constraintEnd_toEndOf="@+id/location_duration_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/location_duration_tv"
+        app:layout_constraintTop_toBottomOf="@+id/price_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

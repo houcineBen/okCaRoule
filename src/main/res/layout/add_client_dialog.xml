@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/client_name_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/client_name_inpu_hint"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/bikes_count_input"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/bikes_count_input"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/bikes_count_hint"
+            android:inputType="number"
+            android:text="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/client_name_input"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/client_phone_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/telephone_de_client"
+            android:inputType="phone"
+            app:layout_constraintEnd_toStartOf="@+id/location_duration"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_name_input" />
+
+        <TextView
+            android:id="@+id/location_duration"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:editable="false"
+            android:ems="10"
+            android:gravity="center|start"
+            android:hint="@string/date_du_depart"
+            android:inputType="date"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/client_phone_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/client_phone_input"
+            app:layout_constraintTop_toBottomOf="@+id/bikes_count_input" />
+
+        <Button
+            android:id="@+id/add_client_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ajouter_client"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#B34242"
+            app:backgroundTint="@color/home_btns_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lock_input" />
+
+        <EditText
+            android:id="@+id/lock_input"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Antivols"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_phone_input" />
+
+        <Spinner
+            android:id="@+id/caution_spinner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lock_input"
+            app:layout_constraintEnd_toStartOf="@+id/price_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_phone_input" />
+
+        <EditText
+            android:id="@+id/price_input"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/price_hint"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/lock_input"
+            app:layout_constraintTop_toBottomOf="@+id/location_duration" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
